@@ -2231,7 +2231,7 @@ function show(id) {
 // ── Password protection ──
 function checkPassword() {
   var input = document.getElementById('password-input').value;
-  if (input === atob('UldBX1dpcmVmcmFtZXM=')) {
+  if (input.trim() === 'RWA_Wireframes') {
     document.getElementById('password-screen').style.display = 'none';
     document.getElementById('main-content').style.display = 'block';
     sessionStorage.setItem('rwa_auth', '1');
