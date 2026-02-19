@@ -394,20 +394,10 @@ function show(id) {
     }
   });
   window.scrollTo(0, 0);
-  history.pushState(null, null, '#' + id);
 }
 window.addEventListener('DOMContentLoaded', function() {
-  var hash = window.location.hash.replace('#', '');
-  var target = hash && document.getElementById('proto-' + hash) ? hash : null;
-  if (!target) {
-    var first = document.querySelector('.proto-section');
-    target = first ? first.id.replace('proto-', '') : null;
-  }
-  if (target) show(target);
-});
-window.addEventListener('hashchange', function() {
-  var hash = window.location.hash.replace('#', '');
-  if (hash && document.getElementById('proto-' + hash)) show(hash);
+  var first = document.querySelector('.proto-section');
+  if (first) show(first.id.replace('proto-', ''));
 });
 </script>
 </head>
@@ -464,6 +454,9 @@ window.addEventListener('hashchange', function() {
 <a class="sb-item" href="#" onclick="show('CRM-003');return false;"><span class="sb-id">CRM-003</span><span class="sb-name">CRM-003</span><span class="sb-badge badge-P1">P1</span></a>
 <a class="sb-item" href="#" onclick="show('CRM-004');return false;"><span class="sb-id">CRM-004</span><span class="sb-name">CRM-004</span><span class="sb-badge badge-P2">P2</span></a>
 <div class="sb-block">Блок 8 — Юридические</div>
+<a class="sb-item" href="#" onclick="show('DOC-003');return false;"><span class="sb-id">DOC-003</span><span class="sb-name">Risk Warnings</span><span class="sb-badge badge-P0">P0</span></a>
+<a class="sb-item" href="#" onclick="show('DOC-004');return false;"><span class="sb-id">DOC-004</span><span class="sb-name">Complaints</span><span class="sb-badge badge-P0">P0</span></a>
+<a class="sb-item" href="#" onclick="show('DOC-005');return false;"><span class="sb-id">DOC-005</span><span class="sb-name">Key Facts</span><span class="sb-badge badge-P0">P0</span></a>
 <a class="sb-item" href="#" onclick="show('DOC-007');return false;"><span class="sb-id">DOC-007</span><span class="sb-name">DOC-007</span><span class="sb-badge badge-P1">P1</span></a>
 <a class="sb-item" href="#" onclick="show('DOC-009');return false;"><span class="sb-id">DOC-009</span><span class="sb-name">DOC-009</span><span class="sb-badge badge-P1">P1</span></a>
 <div class="sb-block">Блок 9 — Email</div>
@@ -2204,6 +2197,177 @@ window.addEventListener('hashchange', function() {
     <div style="background:var(--p2);border:1px solid #a5d6a7;border-radius:2px;padding:10px;font-size:10px;color:#1b5e20;margin-bottom:14px;">✓ Refund of AED <b>[ XX,XXX ]</b> will be credited to your platform balance within <b>2 business days</b>.</div>
   </div>
   <div class="email-footer-area">RWA.Capital · DFSA Regulated · <span style="text
+
+
+<div class="proto-section" id="proto-DOC-003">
+<div class="meta-bar"><b>DOC-003</b><span>·</span><b>Страница предупреждений о рисках</b><span>·</span><span class="badge badge-P0">P0 БЛОКЕР</span><span>·</span><span>/risk-warnings</span></div>
+
+<div class="screen-wrap">
+  <div class="screen-header">
+    <span class="screen-title">Risk Warnings — Предупреждения о рисках</span>
+    <span class="screen-url">rwa.capital/risk-warnings</span>
+  </div>
+  <div class="screen-body" style="max-width:760px;margin:0 auto;padding:32px;">
+
+    <div style="background:#fff3cd;border:2px solid #ffc107;border-radius:4px;padding:20px;margin-bottom:24px;">
+      <div style="font-size:13px;font-weight:700;color:#856404;margin-bottom:8px;">⚠️ ПРЕДУПРЕЖДЕНИЕ О РИСКАХ</div>
+      <div style="font-size:11px;color:#856404;">Инвестиции в недвижимость через краудфандинг связаны со значительными рисками. Прочтите этот документ внимательно перед инвестированием.</div>
+    </div>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">1. Риск потери капитала</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">Стоимость ваших инвестиций может как расти, так и снижаться. Вы можете получить обратно меньше, чем вложили. Прошлые результаты не гарантируют будущих доходов.</p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">2. Риск ликвидности</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">Инвестиции в недвижимость неликвидны. Возможности для продажи доли ограничены. Вы можете быть не в состоянии продать свою долю в желаемые сроки или по желаемой цене.</p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">3. Риск рынка недвижимости</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">Цены на недвижимость могут падать. На стоимость влияют экономические условия, изменения законодательства, местные рыночные факторы.</p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">4. Риск дохода от аренды</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">Доход от аренды не гарантирован. Объект может пустовать, арендаторы могут не платить, расходы на обслуживание могут снижать доходность.</p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">5. Регуляторный риск</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">Изменения в законодательстве ОАЭ или DIFC могут повлиять на стоимость инвестиций или возможность их осуществления.</p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">6. Обязательные раскрытия DFSA</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">RWA.Capital является авторизованным оператором краудфандинговой платформы, лицензированным DFSA (Dubai Financial Services Authority). Регистрационный номер: [XXXX]. Адрес: DIFC, Dubai, UAE.</p>
+
+    <div style="background:#f8f9fa;border:1px solid #dee2e6;border-radius:4px;padding:16px;margin-top:24px;font-size:10px;color:#666;">
+      Последнее обновление: [Дата] · <a href="/complaints-procedure" style="color:#333;">Подать жалобу</a> · <a href="/key-facts" style="color:#333;">Ключевые факты</a>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="proto-section" id="proto-DOC-004">
+<div class="meta-bar"><b>DOC-004</b><span>·</span><b>Процедура подачи жалоб</b><span>·</span><span class="badge badge-P0">P0 БЛОКЕР</span><span>·</span><span>/complaints-procedure</span></div>
+
+<div class="screen-wrap">
+  <div class="screen-header">
+    <span class="screen-title">Complaints Procedure — Процедура подачи жалоб</span>
+    <span class="screen-url">rwa.capital/complaints-procedure</span>
+  </div>
+  <div class="screen-body" style="max-width:760px;margin:0 auto;padding:32px;">
+
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:24px;">RWA.Capital серьёзно относится ко всем жалобам. Мы обязуемся рассматривать их справедливо и своевременно в соответствии с требованиями DFSA [GEN 9.2.11].</p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">Шаг 1 — Свяжитесь с нами</h2>
+    <div style="background:#f8f9fa;border-radius:4px;padding:16px;margin-bottom:20px;font-size:11px;">
+      <div style="margin-bottom:8px;"><b>Email:</b> complaints@rwa.capital</div>
+      <div style="margin-bottom:8px;"><b>Тел:</b> +971 [XX] [XXX XXXX]</div>
+      <div><b>Адрес:</b> RWA.Capital, DIFC, Dubai, UAE</div>
+    </div>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">Шаг 2 — Рассмотрение</h2>
+    <div style="display:flex;gap:16px;margin-bottom:20px;">
+      <div style="flex:1;background:#e8f5e9;border-radius:4px;padding:14px;font-size:11px;text-align:center;">
+        <div style="font-size:20px;margin-bottom:6px;">📧</div>
+        <div style="font-weight:700;margin-bottom:4px;">2 рабочих дня</div>
+        <div style="color:#555;">Подтверждение получения жалобы</div>
+      </div>
+      <div style="flex:1;background:#e3f2fd;border-radius:4px;padding:14px;font-size:11px;text-align:center;">
+        <div style="font-size:20px;margin-bottom:6px;">⏱</div>
+        <div style="font-weight:700;margin-bottom:4px;">28 рабочих дней</div>
+        <div style="color:#555;">Окончательный ответ по жалобе</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">Шаг 3 — Если не удовлетворены ответом</h2>
+    <p style="font-size:11px;color:#555;line-height:1.7;margin-bottom:16px;">Вы можете обратиться в Dubai Financial Services Authority (DFSA): <a href="https://www.dfsa.ae" style="color:#333;">www.dfsa.ae</a></p>
+
+    <h2 style="font-size:15px;font-weight:700;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:16px;">Форма подачи жалобы</h2>
+    <div style="background:#f8f9fa;border:1px solid #dee2e6;border-radius:4px;padding:20px;">
+      <div style="margin-bottom:12px;">
+        <div style="font-size:10px;font-weight:600;margin-bottom:4px;">Ваше имя</div>
+        <div style="height:32px;border:1px solid #ccc;border-radius:2px;background:#fff;"></div>
+      </div>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:10px;font-weight:600;margin-bottom:4px;">Email</div>
+        <div style="height:32px;border:1px solid #ccc;border-radius:2px;background:#fff;"></div>
+      </div>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:10px;font-weight:600;margin-bottom:4px;">Описание жалобы</div>
+        <div style="height:80px;border:1px solid #ccc;border-radius:2px;background:#fff;"></div>
+      </div>
+      <div style="height:34px;background:#333;color:#fff;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;">Отправить жалобу →</div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="proto-section" id="proto-DOC-005">
+<div class="meta-bar"><b>DOC-005</b><span>·</span><b>Key Facts Statement — Ключевые факты</b><span>·</span><span class="badge badge-P0">P0 БЛОКЕР</span><span>·</span><span>Показывается при онбординге</span></div>
+
+<div class="screen-wrap">
+  <div class="screen-header">
+    <span class="screen-title">Key Facts Statement — Ключевые факты об инвестировании</span>
+    <span class="screen-url">Модальное окно / rwa.capital/key-facts</span>
+  </div>
+  <div class="screen-body" style="max-width:620px;margin:0 auto;padding:32px;">
+
+    <div style="border:2px solid #333;border-radius:4px;padding:24px;">
+      <div style="text-align:center;margin-bottom:20px;">
+        <div style="font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">RWA.Capital</div>
+        <div style="font-size:12px;font-weight:600;margin-top:4px;">Key Facts Statement</div>
+        <div style="font-size:10px;color:#888;margin-top:2px;">В соответствии с COB App 2 DFSA</div>
+      </div>
+
+      <table style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:20px;">
+        <tr style="background:#f8f9fa;">
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;width:40%;">Тип платформы</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">Краудфандинг недвижимости (DFSA Category 4)</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Минимальная инвестиция</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">AED 1,000</td>
+        </tr>
+        <tr style="background:#f8f9fa;">
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Комиссия платформы</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">2% при входе + 1% при выходе</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Период охлаждения</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">48 часов с момента инвестиции</td>
+        </tr>
+        <tr style="background:#f8f9fa;">
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Ликвидность</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">Ограниченная. Вторичного рынка нет.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Лимит инвестиций</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">AED 50,000 / год для розничных инвесторов</td>
+        </tr>
+        <tr style="background:#f8f9fa;">
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Варианты выхода</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">Продажа актива или окно ликвидности (при наличии)</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;font-weight:600;">Регулятор</td>
+          <td style="padding:10px 12px;border:1px solid #dee2e6;">DFSA, Dubai International Financial Centre</td>
+        </tr>
+      </table>
+
+      <div style="background:#fff3cd;border:1px solid #ffc107;border-radius:3px;padding:12px;font-size:10px;color:#856404;margin-bottom:16px;">
+        ⚠️ Капитал под риском. Вы можете потерять часть или все вложенные средства.
+      </div>
+
+      <div style="display:flex;gap:8px;align-items:center;font-size:10px;margin-bottom:16px;">
+        <div style="width:14px;height:14px;border:2px solid #333;border-radius:2px;flex-shrink:0;"></div>
+        <div>Я прочитал(а) и понимаю ключевые факты об инвестировании через RWA.Capital</div>
+      </div>
+
+      <div style="height:36px;background:#333;color:#fff;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;letter-spacing:0.5px;">Подтверждаю и продолжаю →</div>
+
+      <div style="text-align:center;margin-top:12px;font-size:10px;color:#888;">
+        <a href="/risk-warnings" style="color:#555;">Предупреждения о рисках</a> · <a href="/complaints-procedure" style="color:#555;">Жалобы</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
 
 </body>
 </html>
